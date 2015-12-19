@@ -14,10 +14,10 @@ setup(
     author="xaedes",
     author_email="xaedes@gmail.com",
     license="MIT",
-    packages=["src/testing"],
-    tests_require=["pytest"],
+    packages=["testing"],
+    tests_require=["pytest"], # invoke with setup.py pytest
     install_requires=[
-        "funcy","pytest-runner"
+        "funcy","numpy","pytest-runner"
     ],
     include_package_data=True,
     zip_safe=False
