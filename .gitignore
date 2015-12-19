@@ -1,4 +1,4 @@
 *.pyc
 tests/.coverage
 tests/*.log
-.cache/
+.cache/*
