@@ -1,14 +1,25 @@
 #!/usr/bin/env python
+from setuptools import setup
 
-from distutils.core import setup
-from catkin_pkg.python_setup import generate_distutils_setup
+def readme():
+    with open('readme.md') as f:
+        return f.read()
 
-d = generate_distutils_setup(
-    packages=['testing'],
-    package_dir={'': 'src'}
-    ##  don't do this unless you want a globally visible script
-    # scripts=['bin/myscript'],
-    # requires=[]
-)
+setup(
+    name="testing",
+    version="0.0.1",
+    description="",
+    long_description=readme(),
+    url="http://github.com/xaedes/testing",
+    author="xaedes",
+    author_email="xaedes@gmail.com",
+    license="MIT",
+    packages=["src/testing"],
+    tests_require=["pytest"],
+    install_requires=[
+        "funcy","pytest-runner"
+    ],
+    include_package_data=True,
+    zip_safe=False
+    )
 
-setup(**d)
