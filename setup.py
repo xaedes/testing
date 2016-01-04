@@ -7,7 +7,7 @@ def readme():
 
 setup(
     name="testing",
-    version="0.0.1",
+    version="0.0.2",
     description="",
     long_description=readme(),
     url="http://github.com/xaedes/testing",
